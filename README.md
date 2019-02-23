@@ -1,6 +1,8 @@
 KelJourneyBot 
 
-- Assist user with the exact time to leave their house to board the bus on time. (uses Telegram API, Google API, LTA API)
+- Assist user with the exact time to leave their house to board the bus on time.
+- Send location to the bot and the bot will reply with nearby bus stops.
+- Uses Telegram API, Google API, LTA API
 
 Prerequisites:
 
