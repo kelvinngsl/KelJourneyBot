@@ -1,6 +1,6 @@
 KelJourneyBot 
 
-Assist user with the exact time to leave their house to board the bus on time. (uses Telegram API, Google API, LTA API)
+- Assist user with the exact time to leave their house to board the bus on time. (uses Telegram API, Google API, LTA API)
 
 Prerequisites:
 
