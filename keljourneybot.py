@@ -1,23 +1,18 @@
+import os, requests, re
 
+from configparser import ConfigParser
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
-import requests
-import re
-import logging
+
 from busarrival import Bus
 import geolocation
-from configparser import ConfigParser
+
 
 config = ConfigParser()
 config.read('config.ini')
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-print ("yo",config.get('API','TELE_KEY'))
-
 token = config.get('API','TELE_KEY')
+PORT = int(os.environ.get('PORT', '8443'))
 
 def start(bot,update):
     chat_id = update.message.chat_id
@@ -167,7 +162,10 @@ def get_nearby(bot,update):
 
 
 def main():
-    updater = Updater(token)
+    updater.start_webhook(listen="0.0.0.0",
+                      port=PORT,
+                      url_path=token)
+    
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler('start',start))
@@ -175,7 +173,7 @@ def main():
     dp.add_handler(MessageHandler(Filters.location, get_nearby))
     updater.dispatcher.add_handler(CallbackQueryHandler(button))
 
-    updater.start_polling()
+    updater.bot.set_webhook("https://kjb2.herokuapp.com/" + token)
     updater.idle()
 
 if __name__ == '__main__':
