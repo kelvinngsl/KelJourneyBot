@@ -1,16 +1,32 @@
 # KelJourneyBot - Telegram Chatbot
 
-- Assist user with the exact time to leave their house to board the bus on time.
+- Assist user by providing the exact time to leave their house to board their desired bus on time.
 - Send location to the bot and the bot will reply with nearby bus stops.
-- Uses Telegram API, Google API, LTA API
+- Built with Telegram API, Google Map API, LTA DataMall API
 
-## Prerequisites
+## Demo Video
+Short Video that demostrates the use of this chat bot application
 
-### Dependecies
-python-telegram-bot
+### Start & Help Commands
+![Start/Help GIF](./assets/1.gif)
 
-requests
+### Manual Bus Stop Entry
+![Manual Entry GIF](./assets/2.gif)
+
+### Dynamic Location Entry
+![Location Entry GIF](./assets/3.gif)
 
 
-### Telegram Token
-Make sure to create a config.ini file and add your telegram token in it
+## Built With
+
+* Backend
+  * [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
+  * [Gunicorn](https://gunicorn.org/)
+
+* Deployment
+  * Heroku Hobby Dyno
+
+
+## Authors
+
+ **Kelvin** - [kelvinngsl](https://github.com/kelvinngsl)
