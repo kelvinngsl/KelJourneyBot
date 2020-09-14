@@ -5,15 +5,15 @@
 - Built with Telegram API, Google Map API, LTA DataMall API
 
 ## Demo Video
-Short Video that demostrates the use of this chat bot application
+Short Video that demostrates the use of this chat bot application. 
 
-### Start & Help Commands
+### 1. Start & Help Commands
 ![Start/Help GIF](./assets/1.gif)
 
-### Manual Bus Stop Entry
+### 2. Manual Bus Stop Entry
 ![Manual Entry GIF](./assets/2.gif)
 
-### Dynamic Location Entry
+### 3. Dynamic Location Entry
 ![Location Entry GIF](./assets/3.gif)
 
 
